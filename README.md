@@ -19,3 +19,10 @@ http://127.0.0.1:8000/api/books
 for users 
 method get 
 http://127.0.0.1:8000/api/users 
+
+//create book 
+method post 
+http://127.0.0.1:8000/api/book-create?title=magic-of-sicence&price=28&author=demo&editor=demo
+
+
+//

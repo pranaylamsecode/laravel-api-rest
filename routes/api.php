@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\Books\BooksController;
 use App\Models\Book;
+use App\Models\User;
+use App\Http\Controllers\BookController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -37,3 +39,15 @@ Route::get('/books', function () {
         'data' => $books
     ]);
 });
+
+Route::get('/users', function () {
+
+    $users =  User::get();
+
+    return response()->json([
+        'message' => 'Success.',
+        'data' => $users
+    ]);
+});
+
+Route::post('/book-create', [BookController::class, 'index']);
