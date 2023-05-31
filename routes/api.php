@@ -51,3 +51,5 @@ Route::get('/users', function () {
 });
 
 Route::post('/book-create', [BookController::class, 'index']);
+
+Route::delete('/book-delete/{id}', [BookController::class, 'delete']);
